@@ -2,7 +2,7 @@ uaa:
   client-id: test-client-2
   client-secret: secret
   port: 443
-  host: uaa.cf.sea.springapps.io
+  host: api.cf.sea.springapps.io
   scheme: https
 
 logging:
