@@ -1,6 +1,6 @@
 package com.example.demo;
 
-import java.sql.Connection;
+import java.time.Duration;
 import java.util.Collections;
 import java.util.Map;
 
@@ -133,6 +133,7 @@ class TMPNetworkConfigurerTest {
 
 	private DefaultConnectionContext getCapiConnectionContext() {
 		return DefaultConnectionContext.builder()
+		                               .cacheDuration(Duration.ofSeconds(10))
 		                               .apiHost(uaaProperties.getHost())
 		                               .port(Integer.parseInt(uaaProperties.getPort()))
 		                               .skipSslValidation(false)
@@ -168,3 +169,4 @@ class TMPNetworkConfigurerTest {
 		}
 	}
 }
+
